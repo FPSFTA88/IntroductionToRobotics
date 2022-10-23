@@ -1,0 +1,44 @@
+const int maxBrightness = 255;
+const int maxPotentiometerValue = 1023;
+
+const int redPin = 11;
+const int potPinRed = A0;
+int potValueRed = 0;
+float voltageRed;
+
+const int bluePin = 9;
+const int potPinBlue = A2;
+int potValueBlue = 0;
+float voltageBlue;
+
+const int greenPin = 10;
+const int potPinGreen = A1;
+int potValueGreen = 0;
+float voltageGreen;
+
+void setup() {
+  pinMode(bluePin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(redPin, OUTPUT);
+
+  pinMode(potPinBlue, INPUT);
+  pinMode(potPinRed, INPUT);
+  pinMode(potPinGreen, INPUT);
+
+ Serial.begin(9600);
+}
+
+void loop() {
+  potValueRed = analogRead(potPinRed);
+  voltageRed = map(potValueRed, 0, maxPotentiometerValue, 0, maxBrightness);
+  analogWrite(redPin, voltageRed);
+
+  potValueGreen = analogRead(potPinGreen);
+  voltageGreen = map(potValueGreen, 0, maxPotentiometerValue, 0, maxBrightness);
+  analogWrite(greenPin, voltageGreen);
+
+  potValueBlue = analogRead(potPinBlue);
+  voltageBlue = map(potValueBlue, 0, maxPotentiometerValue, 0, maxBrightness);
+  analogWrite(bluePin, voltageBlue);
+
+}
