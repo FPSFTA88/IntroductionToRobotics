@@ -17,5 +17,14 @@ Pictures:
 
 Video: https://youtu.be/E0YbIMgwc7o
 
+H2:
+Simulate a crosswalk light! The crosswalk can be used also by the bilnd people, because it use sounds.
 
+Pictures:
 
+![20221029_205317](https://user-images.githubusercontent.com/79564134/198846499-7f88ad0a-9328-480d-abcd-705a84b0cefa.jpg)
+
+![20221029_205323](https://user-images.githubusercontent.com/79564134/198846502-36612f72-d06c-4de1-9088-0c623fed2334.jpg)
+
+Video:
+https://www.youtube.com/watch?v=h1NfAzjrLbc&ab_channel=FiloteSerban
