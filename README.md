@@ -15,7 +15,7 @@ Pictures:
 ![WhatsApp Image 2022-10-23 at 19 23 07](https://user-images.githubusercontent.com/79564134/197404646-517c3d44-5a36-428d-aeb0-c92f81ef4bbf.jpeg)
 ![WhatsApp Image 2022-10-23 at 19 23 52](https://user-images.githubusercontent.com/79564134/197404652-4482efd0-d6f9-4049-bff9-e25ffb91aea9.jpeg)
 
-Video: {https://youtu.be/E0YbIMgwc7o}
+Video: https://youtu.be/E0YbIMgwc7o
 
 
 
