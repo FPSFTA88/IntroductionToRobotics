@@ -51,6 +51,7 @@ void loop() {
   
     buttonState = digitalRead(buttonPin);
     //Serial.println(buttonState);
+
     if(buttonState != buttonOff)
     {
       buttonPressTime = millis();
@@ -85,7 +86,7 @@ void loop() {
   }
   else if(millis() - stateTime < greenTime && state == 4) //State 3
   {
-    if(millis() - stateTime - greenTime > buzzerTime * beepCounter)
+    if(millis() - stateTime - greenTime > buzzerTime * beepCounter) //millis() - stateTime - greenTime = state 3 time
       beepCounter++;
 
     if (beepCounter % 2 == 0)
@@ -117,5 +118,4 @@ void loop() {
       digitalWrite(redCarPin, !ledOn);
     }
   }
-
 }
