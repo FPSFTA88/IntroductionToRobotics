@@ -42,15 +42,27 @@ pinMode(buzzerPin, OUTPUT);
 Serial.begin(9600);
 }
 
+
+void initializare()
+{
+  digitalWrite(greenPeoplePin, !ledOn);
+  digitalWrite(redPeoplePin, ledOn);
+
+  digitalWrite(greenCarPin, ledOn);
+  digitalWrite(redCarPin, !ledOn);
+  digitalWrite(yellowCarPin, !ledOn);
+
+  noTone(buzzerPin);
+}
+
 void loop() {
 
   if(state == 1) //State 1
   {
-    digitalWrite(greenCarPin, ledOn);
-    digitalWrite(redPeoplePin, ledOn);
+    initializare();
   
     buttonState = digitalRead(buttonPin);
-    //Serial.println(buttonState);
+    // Serial.println(buttonState);
 
     if(buttonState != buttonOff)
     {
@@ -65,9 +77,12 @@ void loop() {
     digitalWrite(yellowCarPin, ledOn);
     digitalWrite(greenCarPin, !ledOn);
 
-    //Serial.println("2");
+    // Serial.println("2");
 
     stateTime = millis();
+    // Serial.println(stateTime);
+    // Serial.println(millis() - stateTime);
+
     state = 3;
   }
   // else if (millis() - stateTime < yellowTime)
@@ -79,7 +94,7 @@ void loop() {
     digitalWrite(greenPeoplePin, ledOn);
     digitalWrite(redCarPin, ledOn);
 
-    //Serial.println("3");
+    // Serial.println("3");
 
     stateTime = millis();
     state = 4;
@@ -103,7 +118,7 @@ void loop() {
     else
       noTone(buzzerPin);
 
-    //Serial.println("4");
+    // Serial.println("4");
 
     if(millis() - stateTime - greenTime > blinkCounter * blinkTime) //millis() - stateTime - greenTime = state 4 Time
     {
@@ -114,8 +129,6 @@ void loop() {
     if(millis() - stateTime > greenTime + blinkGreenTime)
     {
       state = 1;
-      digitalWrite(greenPeoplePin, !ledOn);
-      digitalWrite(redCarPin, !ledOn);
     }
   }
 }
