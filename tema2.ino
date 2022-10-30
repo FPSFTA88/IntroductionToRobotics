@@ -13,19 +13,19 @@ byte buttonState = LOW;
 byte buttonOff = HIGH;
 byte greenPeopleLedState = LOW;
 
-int buttonPressTime = 0;
+unsigned long buttonPressTime = 0;
 const int greenTime = 8000;
 const int yellowTime = 3000;
 const int blinkGreenTime = 4000;
 const int blinkTime = 250;
 int blinkCounter = 0;
-int state4Time = 0;
+unsigned long state4Time = 0;
 
 const int buzzerTone = 400;
 const int buzzerTime = 500;
 int beepCounter = 0;
 
-int stateTime = 0;
+unsigned long stateTime = 0;
 int state = 1;
 
 void setup() {
