@@ -28,3 +28,9 @@ Pictures:
 
 Video:
 https://www.youtube.com/watch?v=h1NfAzjrLbc&ab_channel=FiloteSerban
+
+H3: Use a joystick to draw on a 7 segment display.
+
+Pictures:
+![Uploading WhatsApp Image 2022-11-08 at 22.15.15 (1).jpeg…]()
+![WhatsApp Image 2022-11-08 at 22 15 15](https://user-images.githubusercontent.com/79564134/200666241-bc8a1288-b80c-40a6-a976-6d76bfe1151e.jpeg)
