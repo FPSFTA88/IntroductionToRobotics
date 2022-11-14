@@ -38,3 +38,8 @@ Pictures:
 
 Video:
 https://youtu.be/nv3pTQcQ6T8
+
+H4: Use a joystick to change the digit (from 0 si F) on a 4 digit 7 segment display.
+
+Pictures:
+
