@@ -42,4 +42,6 @@ https://youtu.be/nv3pTQcQ6T8
 H4: Use a joystick to change the digit (from 0 si F) on a 4 digit 7 segment display.
 
 Pictures:
+![WhatsApp Image 2022-11-14 at 22 24 44](https://user-images.githubusercontent.com/79564134/201758968-6a01548c-9b30-4a26-9e96-797af3adefc9.jpeg)
 
+Video: 
