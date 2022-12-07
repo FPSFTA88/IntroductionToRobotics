@@ -70,6 +70,8 @@ unsigned int matrixBrightness = 0;
 const int maxContrastBrightness = 255;
  
 bool sound = true;
+
+bool introOK = true;
  
 char menuStructure[numberOfMenuOptions][20] = {
   "   Game Menu  ",
@@ -140,6 +142,17 @@ byte heart[matrixSize] = {
   B00100,
   B00000,
   B00000
+};
+
+byte hungryFace[matrixSize] = {
+  B00000,
+  B00111,
+  B01010,
+  B11100,
+  B11000,
+  B11100,
+  B01110,
+  B00111
 };
  
 bool buttonDecider = 0;
@@ -644,6 +657,7 @@ void setup() {
   lcd.createChar(1, up);
   lcd.createChar(2, full);
   lcd.createChar(3, heart);
+  lcd.createChar(4, hungryFace);
   analogWrite(3, 40);
   pinMode(pinSW, INPUT_PULLUP);
   pinMode(pinX, INPUT);
@@ -663,6 +677,18 @@ void setup() {
  
 void loop() {
  
+  if(introOK)
+  {
+    lcd.setCursor(0,0);
+    lcd.print("   Welcome to   ");
+    lcd.setCursor(0,1);
+    lcd.print("  Pixel Eater ");
+    lcd.write(byte(4));
+    lcd.print("*");
+    delay(3000);
+    lcd.clear();
+    introOK = false;
+  }
   if (gameMenuSelected == true)
     menuScroller();
  
